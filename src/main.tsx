@@ -4,8 +4,8 @@ import "./index.css";
 import { FronteggProvider } from "@frontegg/react";
 
 const contextOptions = {
-  baseUrl: process.env.REACT_APP_API_URL || "",
-  clientId: process.env.REACT_APP_API_KEY || "",
+  baseUrl: import.meta.env.VITE_API_URL || "",
+  clientId: import.meta.env.VITE_API_KEY || "",
   appId: "732689f4-18cf-4fb9-856a-26bd4485b841",
 };
 const container = document.getElementById("root");
