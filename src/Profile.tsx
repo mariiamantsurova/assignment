@@ -8,6 +8,8 @@ function Profile() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleClick = () => {
+    console.log(user?.accessToken);
+    console.log(user?.sid);
     AdminPortal.show();
   };
 
