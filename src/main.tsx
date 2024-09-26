@@ -5,7 +5,7 @@ import { FronteggProvider } from "@frontegg/react";
 
 const contextOptions = {
   baseUrl: import.meta.env.VITE_API_URL || "",
-  clientId: import.meta.env.VITE_API_KEY || "",
+  clientId: import.meta.env.VITE_CLIENT_ID || "",
   appId: "732689f4-18cf-4fb9-856a-26bd4485b841",
 };
 const container = document.getElementById("root");
