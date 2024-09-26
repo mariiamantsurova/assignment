@@ -20,9 +20,6 @@ function App() {
     if (storedTasks) {
       setTasks(JSON.parse(storedTasks));
     }
-  }, []);
-
-  useEffect(() => {
     const storedCompletedTasks = localStorage.getItem("tasks-completed");
     if (storedCompletedTasks) {
       setTasks(JSON.parse(storedCompletedTasks));

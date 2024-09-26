@@ -7,9 +7,7 @@ interface TaskProps {
 function TaskList({ tasks, setTasks, setCompleted }: TaskProps) {
   const completeTask = (task: string, index: number) => {
     setTasks((prev) => {
-      const updatedTasks = prev.filter(
-        (task, taskIndex) => index !== taskIndex
-      );
+      const updatedTasks = prev.filter((_, taskIndex) => index !== taskIndex);
       localStorage.setItem("tasks", JSON.stringify(updatedTasks));
       return updatedTasks;
     });
