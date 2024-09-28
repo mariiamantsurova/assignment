@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import Home from "./Home.js";
 import "./index.css";
 import { FronteggProvider } from "@frontegg/react";
 
@@ -13,8 +13,8 @@ const container = document.getElementById("root");
 if (container) {
   const root = createRoot(container);
   root.render(
-    <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>
-      <App />
+    <FronteggProvider contextOptions={contextOptions} hostedLoginBox={false}>
+      <Home />
     </FronteggProvider>
   );
 } else {

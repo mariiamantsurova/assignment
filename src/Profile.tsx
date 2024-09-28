@@ -1,21 +1,16 @@
-import { AdminPortal, ContextHolder, useAuth } from "@frontegg/react";
+import { AdminPortal, useAuth } from "@frontegg/react";
 import { useState } from "react";
 import DropDown from "./DropDown";
+import { useNavigate } from "react-router-dom";
 
 function Profile() {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleClick = () => {
-    console.log(user?.accessToken);
-    console.log(user?.sid);
     AdminPortal.show();
-  };
-
-  const logout = () => {
-    const baseUrl = ContextHolder.getContext().baseUrl;
-    window.location.href = `${baseUrl}/oauth/logout?post_logout_redirect_uri=${window.location}`;
   };
 
   return (
@@ -34,7 +29,9 @@ function Profile() {
         ></DropDown>
       </div>
       <div className="buttons">
-        <button onClick={() => logout()}>Click to logout</button>
+        <button onClick={() => navigate("/account/logout")}>
+          Click to logout
+        </button>
         <button onClick={handleClick}>Settings</button>
       </div>
     </div>
