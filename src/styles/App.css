@@ -69,10 +69,31 @@ body {
 }
 .stats-card {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-around;
   grid-column: span 3;
+}
+
+.users_list {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.users_list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.users_list img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .add-task_card {
